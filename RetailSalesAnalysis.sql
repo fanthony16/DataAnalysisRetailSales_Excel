@@ -3,7 +3,7 @@
 --select top 10 * [dbo].[tblInventoryCategory]
 --select top 10 * [dbo].[tblOrder]
 
-select intOrderID as [Transaction ID],dteOrderDate as [Date],a.txtCustomerCode,
+select intOrderID as [Transaction ID],dteOrderDate as [Date],a.txtCustomerCode as [Customer ID],
  CASE WHEN b.txtSex = 'M' then 'Male'
 	  WHEN b.txtSex = 'F' then 'Female'
  END as [Gender], datediff(Year,getdate(),b.dteDOB) as [Age],d.txtItemCategoryName as [Product Category], a.txtQty as [Quantity],
